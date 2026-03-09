@@ -37,7 +37,7 @@ The following table summarizes all rules that may trigger a CAPTCHA challenge.
 |-----|-----|-----|-----|
 | High request volume | Requests from a single IP within a short time window | >500 requests in 20 minutes | Prevent request flooding |
 | Blacklisted IP | Request originates from a blocked IP | Immediate | Block known malicious sources |
-| Traffic spike detection | Traffic significantly exceeds historical baseline | >2× average requests in current hour | Detect abnormal activity |
+| Traffic spike detection | Traffic significantly exceeds historical baseline | >2× average requests for the same hour over the last 14 days | Detect abnormal activity |
 | Repeated payload submission | Identical payload sent multiple times | >5 times within 30 seconds | Prevent automated form abuse |
 | Manual activation | CAPTCHA enabled by administrators | Configurable | Incident response and manual control |
 
